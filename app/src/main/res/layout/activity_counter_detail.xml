@@ -1,0 +1,129 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="main.mkamprat_countbook.counterDetailActivity"
+    tools:ignore="MergeRootFrame">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/detail_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="top"
+        android:gravity="bottom|end"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom|end" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/counter_name_container"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:paddingTop="20dp"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom">
+
+        <EditText
+            android:id="@+id/counterNameText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="@string/nameHint"
+            android:inputType="textPersonName" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/counter_starting_value_container"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:paddingTop="20dp"
+        app:layout_anchor="@id/counter_name_container"
+        app:layout_anchorGravity="bottom">
+
+        <EditText
+            android:id="@+id/startingValueText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="@string/startingValueHint"
+            android:inputType="number" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/counter_current_value_container"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:paddingTop="20dp"
+        app:layout_anchor="@id/counter_starting_value_container"
+        app:layout_anchorGravity="bottom">
+
+        <EditText
+            android:id="@+id/currentValueText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="@string/currentValueHint"
+            android:inputType="number" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/counter_comment_container"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_gravity="bottom"
+        android:paddingEnd="80dp"
+        android:paddingStart="8dp"
+        android:paddingTop="20dp"
+        app:layout_anchor="@id/counter_current_value_container"
+        app:layout_anchorGravity="bottom">
+
+        <EditText
+            android:id="@+id/counterCommentText"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:gravity="top"
+            android:hint="@string/commentHint" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/counter_comment_container"
+        app:layout_anchorGravity="center|end"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/counter_detail_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

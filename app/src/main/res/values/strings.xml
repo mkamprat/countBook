@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">mkamprat-countBook</string>
+    <string name="title_counter_detail">Edit Counter</string>
+    <string name="title_new_counter">New Counter</string>
+
+    <string name="createButton">Create</string>
+    <string name="saveButton">Save</string>
+
+    <string name="nameHint">Counter Name</string>
+    <string name="startingValueHint">Starting Value</string>
+    <string name="currentValueHint">Current Value</string>
+    <string name="commentHint">Comments</string>
+    <string name="lastEdit">Last Edit: </string>
+
+</resources>
